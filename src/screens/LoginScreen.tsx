@@ -36,6 +36,7 @@ const LoginScreen = () => {
         <TextInput
           style={styles.input}
           placeholder="Email"
+          placeholderTextColor={Colors.text.primary}
           value={email}
           onChangeText={setEmail}
           keyboardType="email-address"
@@ -44,6 +45,7 @@ const LoginScreen = () => {
         <TextInput
           style={styles.input}
           placeholder="Пароль"
+          placeholderTextColor={Colors.text.primary}
           value={password}
           onChangeText={setPassword}
           secureTextEntry
