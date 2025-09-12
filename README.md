@@ -10,10 +10,21 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 
 ## Build preview
 
+```bash
 npm install -g eas-cli
+```
+
+```bash
 npx expo install expo-dev-client
+```
+
+```bash
 eas login
+```
+
+```bash
 eas build --profile preview
+```
 
 Android previews are defined as a `workspace.onStart` hook and started as a vscode task when the workspace is opened/started.
 
