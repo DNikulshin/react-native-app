@@ -1,1 +1,1 @@
-export const FAKE_USER = { name: 'test' }
+export const API = {}

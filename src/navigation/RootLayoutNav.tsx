@@ -1,4 +1,5 @@
 import Colors from '@/constants/Colors'
+import Paths from '@/constants/Paths'
 import { useProtectedRoute } from '@/hooks/useProtectedRoute'
 import { Stack } from 'expo-router'
 import React from 'react'
@@ -25,7 +26,7 @@ export const RootLayoutNav = () => {
             headerShown: false,
           }}
         >
-          <Stack.Screen name="(tabs)" />
+          <Stack.Screen name={Paths.tabs} />
         </Stack>
       </View>
     </SafeAreaView>

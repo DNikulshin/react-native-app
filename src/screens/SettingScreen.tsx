@@ -1,16 +1,16 @@
 import Colors from '@/constants/Colors'
-import Paths from '@/constants/Paths'
-import { Link } from 'expo-router'
+import { useAuth } from '@/hooks/useAuth'
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
 const SettingScreen = () => {
+  const { signOut } = useAuth()
   return (
     <View style={styles.container}>
       <Text style={styles.title}>SettingScreen</Text>
-      <Link href={Paths.login} style={styles.link}>
-        To Login
-      </Link>
+      <TouchableOpacity onPress={signOut}>
+        <Text style={styles.button}>Logout</Text>
+      </TouchableOpacity>
     </View>
   )
 }
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: Colors.bg.primary,
-    rowGap: 8,
+    rowGap: 20,
   },
   title: {
     color: Colors.text.primary,
@@ -35,5 +35,14 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.bg.secondary,
     textDecorationLine: 'underline',
     fontSize: 24,
+  },
+  button: {
+    color: Colors.text.secondary,
+    backgroundColor: Colors.bg.btn,
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+    borderRadius: 7,
+    fontSize: 16,
+    textAlign: 'center',
   },
 })
