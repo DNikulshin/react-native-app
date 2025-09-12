@@ -29,6 +29,8 @@ const LoginScreen = () => {
     // Автоматическая навигация при успехе
   }
 
+  console.log(process.env.EXPO_PUBLIC_API_URL)
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Вход</Text>
